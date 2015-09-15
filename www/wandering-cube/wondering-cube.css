@@ -11,10 +11,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: wandering-cube 1.6s ease-in-out infinite both;
+  animation: wandering-cube 1.8s ease-in-out infinite both;
 }
 .container .cube-2 {
-  animation-delay: -0.8s;
+  animation-delay: -0.9s;
 }
 @keyframes wandering-cube {
   0% {
