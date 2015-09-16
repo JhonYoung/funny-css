@@ -25,6 +25,9 @@
 		.circle-loop(@n, @i: 2) when (@i =< @n) {
 		  &:nth-child(@{i}) {
 		    transform: rotate(30deg + ((@i - 2) * 30deg ));
+		    &:before {
+					animation-delay: -1.1s + (@i - 2) * 0.1s; 
+		    }
 		  }
 		  .circle-loop(@n, (@i + 1));
 		}
