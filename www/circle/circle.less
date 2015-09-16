@@ -21,7 +21,6 @@
 		}
 
 		.circle-loop(12);
-
 		.circle-loop(@n, @i: 2) when (@i =< @n) {
 		  &:nth-child(@{i}) {
 		    transform: rotate(30deg + ((@i - 2) * 30deg ));
@@ -31,22 +30,8 @@
 		  }
 		  .circle-loop(@n, (@i + 1));
 		}
-
-
-		// .circle-before-loop(12);
-
-		// .circle-before-loop(@n, @i: 2) when ( @i =< @n) {
-		// 	&:nth-child(@{i}){
-		// 		width: 10px;
-		// 		&:before {
-		// 			animation-delay: -1.1s + (@i - 2) * 0.1s; 
-		// 		}
-		// 	}
-		// 	.circle-before-loop(@n, (@i + 1));
-		// }
-
-
 	}
+
 
 	@keyframes circles {
 		0%, 80%, 100% {
