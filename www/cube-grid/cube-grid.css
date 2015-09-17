@@ -1,0 +1,37 @@
+.container {
+  width: 40px;
+  height: 40px;
+  margin: 40px auto;
+}
+.container > div {
+  width: 33%;
+  height: 33%;
+  background-color: #333;
+  float: left;
+  -webkit-animation: cube-scale 1.3s infinite ease-in-out;
+          animation: cube-scale 1.3s infinite ease-in-out;
+}
+@-webkit-keyframes cube-scale {
+  0%,
+  70%,
+  100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
+@keyframes cube-scale {
+  0%,
+  70%,
+  100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
