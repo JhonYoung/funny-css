@@ -19,5 +19,28 @@
 			border-radius: 100%;
 			animation: fade-cricle 1.2s infinite ease-in-out both; 
 		}
+
+		.loop(12);
+
+
 	}
+}
+
+@keyframes fade-cricle {
+	0%, 39%, 100% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+}
+
+.loop(@counter) when (@counter > 1) {
+  .loop((@counter - 1));
+  &:nth-child(@{counter}) {
+  	transform: rotate(@counter * 30deg - 30deg);
+  	&:before{
+  		animation-delay: @counter * 0.1s + -1.3s;
+  	}
+  }
 }
