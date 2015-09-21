@@ -1,0 +1,24 @@
+.container {
+  margin: 40px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.container > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.container > div:before {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 15%;
+  height: 15%;
+  background-color: #333;
+  border-radius: 100%;
+  -webkit-animation: fade-cricle 1.2s infinite ease-in-out both;
+          animation: fade-cricle 1.2s infinite ease-in-out both;
+}
