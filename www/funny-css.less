@@ -12,16 +12,18 @@ body{
 		width: 1024px;
 		margin: 0 auto;
 		background-color: @body-background;
-
+		
+		// 头部标题，菜单样式
 		.header{
+			font-family: 'Segoe UI Light', 'Microsoft Jhenghei';
 			margin: 0 auto;
 			width: 960px;
-			height: 240px;
+			height: 320px;
 			border-radius: 5px;
 			.title{
-				height: 90px;
+				height: 80;
 				text-align: center;
-				font-family: 'Segoe UI Light', 'Microsoft Jhenghei';
+				
 		    font-size: 48px;
 		    font-style: normal;
 		    color: @font-red;
@@ -35,7 +37,6 @@ body{
 					flex-direction: row;
 					line-height: 40px;
 					list-style: none;
-				  font-family: 'Segoe UI Light', 'Microsoft Jhenghei';
 
 					a{
 						display: block;
@@ -60,7 +61,14 @@ body{
 				width: 100%;
 				background-color: @font-red;
 				color: @white;
+				margin-top: 30px;
+				height: 160px;
+				text-align: center;
+		    font-size: 40px;
+		    line-height: 160px;
 			}
 		}
+
+		
 	}
 }
