@@ -1,0 +1,67 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+body .container {
+  width: 1024px;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+}
+body .container .header {
+  margin: 0 auto;
+  width: 960px;
+  height: 240px;
+  border-radius: 5px;
+}
+body .container .header .title {
+  height: 90px;
+  text-align: center;
+  font-family: 'Segoe UI Light', 'Microsoft Jhenghei';
+  font-size: 48px;
+  font-style: normal;
+  color: #fe7376;
+}
+body .container .header .menu ul {
+  width: 600px;
+  margin: 0 auto;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  line-height: 40px;
+  list-style: none;
+  font-family: 'Segoe UI Light', 'Microsoft Jhenghei';
+}
+body .container .header .menu ul a {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-decoration: none;
+  border-bottom: solid 2px #cccccc;
+  color: #989795;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+body .container .header .menu ul a li {
+  text-align: center;
+}
+body .container .header .menu ul a:hover {
+  border-bottom: solid 2px #fe7376;
+  color: #fe7376;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+body .container .header .decorations {
+  width: 100%;
+  background-color: #fe7376;
+  color: #ffffff;
+}

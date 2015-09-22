@@ -10,47 +10,72 @@
   height: 100%;
   width: 6px;
   display: inline-block;
-  animation: wave 1s infinite ease-in-out;
+  -webkit-animation: wave 1s infinite ease-in-out;
+          animation: wave 1s infinite ease-in-out;
 }
 .container > div:nth-child(0) {
-  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
 }
 .container > div:nth-child(1) {
-  animation-delay: -0.9s;
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
 }
 .container > div:nth-child(2) {
-  animation-delay: -0.8s;
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
 }
 .container > div:nth-child(3) {
-  animation-delay: -0.7s;
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
 }
 .container > div:nth-child(4) {
-  animation-delay: -0.6s;
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
 }
 .container > div:nth-child(5) {
-  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
 }
 .container > div:nth-child(6) {
-  animation-delay: -0.4s;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
 }
 .container > div:nth-child(7) {
-  animation-delay: -0.3s;
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
 }
 .container > div:nth-child(8) {
-  animation-delay: -0.2s;
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
 }
 .container > div:nth-child(9) {
-  animation-delay: -0.1s;
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
 }
 .container > div:nth-child(10) {
-  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+@-webkit-keyframes wave {
+  0%,
+  100% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  50% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
 }
 @keyframes wave {
   0%,
   100% {
-    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
   }
   50% {
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }

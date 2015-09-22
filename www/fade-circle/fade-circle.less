@@ -19,10 +19,7 @@
 			border-radius: 100%;
 			animation: fade-cricle 1.2s infinite ease-in-out both; 
 		}
-
 		.loop(12);
-
-
 	}
 }
 
@@ -35,6 +32,7 @@
 	}
 }
 
+// 定义循环
 .loop(@counter) when (@counter > 1) {
   .loop((@counter - 1));
   &:nth-child(@{counter}) {
