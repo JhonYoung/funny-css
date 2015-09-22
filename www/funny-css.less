@@ -3,6 +3,7 @@
 @font-red: #FE7376;
 @font-grey: #989795;
 @white: #ffffff;
+@dot-blue: #5BD0D9;
 
 body{
 	padding: 0;
@@ -10,16 +11,15 @@ body{
 	
 	.container{
 		width: 1024px;
+		font-family: 'Segoe UI Light', 'Microsoft Jhenghei';
 		margin: 0 auto;
 		background-color: @body-background;
 		
 		// 头部标题，菜单样式
 		.header{
-			font-family: 'Segoe UI Light', 'Microsoft Jhenghei';
 			margin: 0 auto;
 			width: 960px;
 			height: 320px;
-			border-radius: 5px;
 			.title{
 				height: 80;
 				text-align: center;
@@ -66,6 +66,165 @@ body{
 				text-align: center;
 		    font-size: 40px;
 		    line-height: 160px;
+		    border-radius: 5px;
+			}
+		}
+
+		.content-wrap{
+			margin-top: 20px;
+			&:first-child{
+				margin-top: 0;
+			}
+			display: flex;
+			flex-direction: row;
+			>div{
+				flex: 1;
+				height: 160px;
+				>div{
+					width: 200px;
+					height: 100%;
+					border-radius: 5px;
+					border: solid 1px #cccccc;
+					margin: 0 auto;
+					.title{
+						text-align: center;
+						line-height: 2rem;
+					}
+					.content{
+
+						// chasing-dots
+						&.chasing-dots-container{
+							width: 40px;
+							height: 40px;
+							margin: 40px auto;
+							position: relative;
+							text-align: center;
+							animation: dot-rotate 2s infinite linear;
+							>div{
+								width: 60%;
+								height: 60%; 
+								border-radius: 100%;
+								display: inline-block;
+								background-color: @dot-blue;
+								position: absolute;
+								top: 0;
+								animation: dot-bounce 1.2s infinite ease-in-out;
+								&:last-child{
+									top: auto;
+									bottom: 0;
+									animation-delay: -0.6s;
+								}
+							}
+
+							@keyframes dot-rotate {
+								100% {
+									transform: rotate(360deg);
+								}
+							}
+
+							@keyframes dot-bounce {
+								0%, 100% {
+									transform: scale(0);
+								}
+
+								50% {
+									transform: scale(1);
+								}
+							}
+						}
+
+						//circle
+						&.circle{
+							margin: 40px auto;
+							width: 40px;
+							height: 40px;
+							position: relative;
+							>div{
+								width: 100%;
+								height: 100%;
+								position: absolute;
+								left: 0;
+								top: 0;
+								&:before{
+									content: '';
+									display: block;
+									margin: 0 auto;
+									width: 15%;
+									height: 15%;
+									background-color: @dot-blue;
+									border-radius: 100%;
+									animation: circles 1.2s infinite ease-in-out both;
+								}
+								.circle-loop(12);
+								.circle-loop(@n, @i: 2) when (@i =< @n) {
+								  &:nth-child(@{i}) {
+								    transform: rotate(30deg + ((@i - 2) * 30deg ));
+								    &:before {
+											animation-delay: -1.1s + (@i - 2) * 0.1s; 
+								    }
+								  }
+								  .circle-loop(@n, (@i + 1));
+								}
+							}
+							@keyframes circles {
+								0%, 80%, 100% {
+									transform: scale(0);
+								}
+								40% {
+									transform: scale(1);
+								}
+							}
+						}
+
+						//cube-grid
+						&.cube-grid{
+							width: 40px;
+							height: 40px;
+							margin: 40px auto;
+							>div{
+								width: 33%;
+								height: 33%;
+								background-color: @dot-blue;
+								float: left;
+								animation: cube-scale 1.3s infinite ease-in-out;
+
+								.animate-delay(3);
+								.animate-delay(@n, @i: 1) when (@i =< @n) {
+								  &:nth-child(@{i}) {
+								    animation-delay: 0.1s * @i + 0.1s
+								  }
+								  .animate-delay(@n, (@i + 1));
+								}
+
+
+								.animate-delay2(6);
+								.animate-delay2(@n, @i: 4) when (@i =< @n) {
+								  &:nth-child(@{i}) {
+								    animation-delay: 0.1s * (@i - 3);
+								  }
+								  .animate-delay2(@n, (@i + 1));
+								}
+
+								.animate-delay3(9);
+								.animate-delay3(@n, @i: 7) when (@i =< @n) {
+								  &:nth-child(@{i}) {
+								    animation-delay: 0.1s * (@i - 6) -0.1s;
+								  }
+								  .animate-delay3(@n, (@i + 1));
+								}
+							}
+
+							@keyframes cube-scale {
+								0%, 70%, 100% {
+								  transform: scale3D(1, 1, 1); 
+								}
+								35% {
+								  transform: scale3D(0, 0, 1); 
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 
