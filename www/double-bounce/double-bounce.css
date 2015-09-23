@@ -13,17 +13,32 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: double-bounce 1.8s infinite ease-in-out;
+  -webkit-animation: double-bounce 1.8s infinite ease-in-out;
+          animation: double-bounce 1.8s infinite ease-in-out;
 }
 .double-bounce > div:last-child {
-  animation-delay: -0.9s;
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+}
+@-webkit-keyframes double-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 @keyframes double-bounce {
   0%,
   100% {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   50% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
