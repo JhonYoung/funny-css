@@ -644,3 +644,6 @@ body .container .content-wrap > div > div .content.three-bounce > div:last-child
             transform: scale(1);
   }
 }
+body .container .footer {
+  padding-top: 20px;
+}
