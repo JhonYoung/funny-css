@@ -645,5 +645,6 @@ body .container .content-wrap > div > div .content.three-bounce > div:last-child
   }
 }
 body .container .footer {
-  padding-top: 20px;
+  padding: 20px 0;
+  text-align: center;
 }
