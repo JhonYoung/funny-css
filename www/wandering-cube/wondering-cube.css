@@ -11,28 +11,62 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: wandering-cube 1.8s ease-in-out infinite both;
+  -webkit-animation: wandering-cube 1.8s ease-in-out infinite both;
+          animation: wandering-cube 1.8s ease-in-out infinite both;
 }
 .container .cube-2 {
-  animation-delay: -0.9s;
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+}
+@-webkit-keyframes wandering-cube {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translateX(30px) rotate(-90deg) scale(0.5);
+            transform: translateX(30px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    -webkit-transform: translateX(30px) translateY(30px) rotate(-179deg);
+            transform: translateX(30px) translateY(30px) rotate(-179deg);
+  }
+  50.1% {
+    -webkit-transform: translateX(30px) translateY(30px) rotate(-180deg);
+            transform: translateX(30px) translateY(30px) rotate(-180deg);
+  }
+  75% {
+    -webkit-transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5);
+            transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
 }
 @keyframes wandering-cube {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   25% {
-    transform: translateX(30px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(30px) rotate(-90deg) scale(0.5);
+            transform: translateX(30px) rotate(-90deg) scale(0.5);
   }
   50% {
-    transform: translateX(30px) translateY(30px) rotate(-179deg);
+    -webkit-transform: translateX(30px) translateY(30px) rotate(-179deg);
+            transform: translateX(30px) translateY(30px) rotate(-179deg);
   }
   50.1% {
-    transform: translateX(30px) translateY(30px) rotate(-180deg);
+    -webkit-transform: translateX(30px) translateY(30px) rotate(-180deg);
+            transform: translateX(30px) translateY(30px) rotate(-180deg);
   }
   75% {
-    transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5);
+            transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5);
   }
   100% {
-    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
