@@ -780,7 +780,7 @@ body .container .content-wrap > div > div .content.wave > div:nth-child(5) {
 body .container .content-wrap > div > div .content.rotating-plane {
   width: 40px;
   height: 40px;
-  background-color: #333;
+  background-color: #5bd0d9;
   margin: 40px auto;
   -webkit-animation: rotate-plane 1.2s infinite ease-in-out;
           animation: rotate-plane 1.2s infinite ease-in-out;
