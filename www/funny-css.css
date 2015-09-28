@@ -777,6 +777,42 @@ body .container .content-wrap > div > div .content.wave > div:nth-child(5) {
             transform: scaleY(1);
   }
 }
+body .container .content-wrap > div > div .content.rotating-plane {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  margin: 40px auto;
+  -webkit-animation: rotate-plane 1.2s infinite ease-in-out;
+          animation: rotate-plane 1.2s infinite ease-in-out;
+}
+@-webkit-keyframes rotate-plane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-179.9deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-179.9deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+@keyframes rotate-plane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-179.9deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-179.9deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
 body .container .footer {
   margin-top: 50px;
   padding: 20px 0;
