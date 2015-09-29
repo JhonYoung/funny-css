@@ -5,7 +5,6 @@
   position: relative;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
-  background-color: red;
 }
 .folding-cube > div {
   float: left;
@@ -38,19 +37,19 @@
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-.folding-cube > div:nth-child(3) {
+.folding-cube > div:nth-child(4) {
   -webkit-transform: scale(1.1) rotateZ(180deg);
           transform: scale(1.1) rotateZ(180deg);
 }
-.folding-cube > div:nth-child(3):before {
+.folding-cube > div:nth-child(4):before {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
-.folding-cube > div:nth-child(4) {
+.folding-cube > div:nth-child(3) {
   -webkit-transform: scale(1.1) rotateZ(270deg);
           transform: scale(1.1) rotateZ(270deg);
 }
-.folding-cube > div:nth-child(4):before {
+.folding-cube > div:nth-child(3):before {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
