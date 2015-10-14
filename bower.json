@@ -1,10 +1,12 @@
-// {
-//   "name": "spinkit",
-//   "private": false,
-//   "dependencies": {
-    
-//   },
-//   "exportsOverride": {
-    
-//   }
-// }
+{
+  "name": "spinkit",
+  "private": false,
+  "dependencies": {
+    "jquery": "*"
+  },
+  "exportsOverride": {
+    "jquery": {
+      ".": "dist/jquery.js"
+    }
+  }
+}

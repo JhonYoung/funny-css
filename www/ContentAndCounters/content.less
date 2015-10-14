@@ -1,0 +1,126 @@
+@import url('../common/_color.less');
+.container{
+	width: 1024px;
+	font-family: 'Segoe UI Light', 'Microsoft Jhenghei';
+	margin: 0 auto;
+	background-color: @body-background;
+	
+	// 头部标题，菜单样式
+	.header{
+		margin: 0 auto;
+		width: 960px;
+		height: 320px;
+		.title{
+			height: 80;
+			text-align: center;
+			
+	    font-size: 48px;
+	    font-style: normal;
+	    color: @font-red;
+		}
+		.menu{
+			ul{
+				width: 600px;
+				margin: 0 auto;
+				height: 40px;
+				display: flex;
+				flex-direction: row;
+				line-height: 40px;
+				list-style: none;
+
+				a{
+					display: block;
+					flex: 1;
+					text-decoration: none;
+					border-bottom: solid 2px @border-color;
+					color: @font-grey;
+					transition: all 0.3s ease-in-out;
+					li{
+						text-align: center;
+					}
+					&:hover{
+						border-bottom: solid 2px @font-red;
+						color: @font-red;
+						font-weight: 600;
+						transition: all 0.3s ease-in-out;
+					}
+				}
+			}
+		}
+		.decorations{
+			width: 100%;
+			background-color: @font-red;
+			color: @white;
+			margin-top: 30px;
+			height: 160px;
+			text-align: center;
+	    font-size: 40px;
+	    line-height: 160px;
+	    border-radius: 5px;
+		}
+	}
+
+	.content-wrap{
+		margin-top: 20px;
+		display: flex;
+		flex-direction: row;
+		.content{
+			flex: 1;
+			height: 300px; 
+			display: flex;
+			justify-content:center;
+			align-item: center;
+			.title{
+				text-align: center;
+				line-height: 2rem;
+				border-bottom: solid #cccccc 1px;
+			}
+			>div{
+				width: 400px;
+				border: solid 1px #cccccc;
+				border-radius: 5px;
+			}
+			.inserting-counter{
+				.detial{
+					ul{
+						list-style: none;
+						counter-reset: words;
+						li:before{
+							counter-increment: words 3;
+							content: counter(words) ".";
+							padding-right: 0.5rem;
+
+						}
+					}
+				}
+			}
+			.inserting-counter-2{
+				.detial{
+					ol{
+					  counter-reset: item;
+					  list-style: none;
+					}
+					li{
+					  display: block;
+					  &:before {
+					   counter-increment: item;
+					   content: counters(item, ".") " ";
+						}
+					}
+					
+				}
+			}
+		}
+
+	}
+
+
+	.footer{
+		margin-top: 50px;
+		padding: 20px 0;
+		text-align: center;
+		border-top: #cccccc solid 1px;
+	}
+
+	
+}

@@ -3,8 +3,6 @@
   "devDependencies": {
     "grunt": "*",
     "grunt-bower-task": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-less": "*",
-    "less-plugin-autoprefix": "*"
+    "grunt-contrib-copy": "*"
   }
 }

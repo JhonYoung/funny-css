@@ -1,0 +1,47 @@
+.container{
+	width: 40px;
+	height: 40px;
+	margin: 40px auto;
+	>div{
+		width: 33%;
+		height: 33%;
+		background-color: #333;
+		float: left;
+		animation: cube-scale 1.3s infinite ease-in-out;
+
+		.animate-delay(3);
+		.animate-delay(@n, @i: 1) when (@i =< @n) {
+		  &:nth-child(@{i}) {
+		    animation-delay: 0.1s * @i + 0.1s
+		  }
+		  .animate-delay(@n, (@i + 1));
+		}
+
+
+		.animate-delay2(6);
+		.animate-delay2(@n, @i: 4) when (@i =< @n) {
+		  &:nth-child(@{i}) {
+		    animation-delay: 0.1s * (@i - 3);
+		  }
+		  .animate-delay2(@n, (@i + 1));
+		}
+
+		.animate-delay3(9);
+		.animate-delay3(@n, @i: 7) when (@i =< @n) {
+		  &:nth-child(@{i}) {
+		    animation-delay: 0.1s * (@i - 6) -0.1s;
+		  }
+		  .animate-delay3(@n, (@i + 1));
+		}
+
+	}
+
+	@keyframes cube-scale {
+		0%, 70%, 100% {
+		  transform: scale3D(1, 1, 1); 
+		}
+		35% {
+		  transform: scale3D(0, 0, 1); 
+		}
+	}
+}
